@@ -526,7 +526,7 @@
             _.$slides.wrapAll('<ul class="slick-track"/>').parent();
 
         _.$list = _.$slideTrack.wrap(
-            '<div class="slick-list" role="region" aria-label="Gallery Carousel" />').parent();
+            '<div class="slick-list" role="region" aria-label="Gallery Carousel" aria-live="polite" />').parent();
         _.$slideTrack.css('opacity', 0);
 
         if (_.options.centerMode === true || _.options.swipeToSlide === true) {
