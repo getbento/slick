@@ -1268,7 +1268,6 @@
             $(_.$slider).addClass('slick-initialized');
             $(_.$slider).attr('role', 'region');
             $(_.$slider).attr('aria-label', 'carousel');
-            $(_.$slider).attr('aria-live', 'polite');
             _.buildRows();
             _.buildOut();
             _.setProps();
