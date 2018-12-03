@@ -522,11 +522,11 @@
         _.$slider.addClass('slick-slider');
 
         _.$slideTrack = (_.slideCount === 0) ?
-            $('<ul class="slick-track" />').appendTo(_.$slider) :
-            _.$slides.wrapAll('<ul class="slick-track"/>').parent();
+            $('<ul role="presentation" class="slick-track" />').appendTo(_.$slider) :
+            _.$slides.wrapAll('<ul role="presentation" class="slick-track"/>').parent();
 
         _.$list = _.$slideTrack.wrap(
-            '<div class="slick-list" role="region" aria-label="Gallery Carousel" aria-live="polite" />').parent();
+            '<div class="slick-list" />').parent();
         _.$slideTrack.css('opacity', 0);
 
         if (_.options.centerMode === true || _.options.swipeToSlide === true) {
@@ -1266,7 +1266,9 @@
         if (!$(_.$slider).hasClass('slick-initialized')) {
 
             $(_.$slider).addClass('slick-initialized');
-
+            $(_.$slider).attr('role', 'region');
+            $(_.$slider).attr('aria-label', 'carousel');
+            $(_.$slider).attr('aria-live', 'polite');
             _.buildRows();
             _.buildOut();
             _.setProps();
