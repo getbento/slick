@@ -521,9 +521,17 @@
 
         _.$slider.addClass('slick-slider');
 
-        _.$slideTrack = (_.slideCount === 0) ?
-            $('<ul role="presentation" class="slick-track" />').appendTo(_.$slider) :
-            _.$slides.wrapAll('<ul role="presentation" class="slick-track"/>').parent();
+        console.log('slider', _.$slider.find('li'));
+
+        if(_.$slider.find('li').length > 0){
+            _.$slideTrack = (_.slideCount === 0) ?
+                $('<ul role="presentation" class="slick-track" />').appendTo(_.$slider) :
+                _.$slides.wrapAll('<ul role="presentation" class="slick-track"/>').parent();
+        } else {
+            _.$slideTrack = (_.slideCount === 0) ?
+            $('<div class="slick-track" />').appendTo(_.$slider) :
+            _.$slides.wrapAll('<div class="slick-track"/>').parent();
+        }
 
         _.$list = _.$slideTrack.wrap(
             '<div class="slick-list" />').parent();
@@ -1266,8 +1274,10 @@
         if (!$(_.$slider).hasClass('slick-initialized')) {
 
             $(_.$slider).addClass('slick-initialized');
-            $(_.$slider).attr('role', 'region');
-            $(_.$slider).attr('aria-label', 'carousel');
+            if($(_.$slider).find('li').length > 0){
+                $(_.$slider).attr('role', 'region');
+                $(_.$slider).attr('aria-label', 'carousel');
+            }
             _.buildRows();
             _.buildOut();
             _.setProps();
