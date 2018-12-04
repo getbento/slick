@@ -521,7 +521,6 @@
 
         _.$slider.addClass('slick-slider');
 
-        console.log('slider', _.$slider.find('li'));
 
         if(_.$slider.find('li').length > 0){
             _.$slideTrack = (_.slideCount === 0) ?
