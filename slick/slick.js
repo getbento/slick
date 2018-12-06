@@ -1315,8 +1315,7 @@
                 });
 
         _.$slides.add(_.$slideTrack.find('.slick-cloned')).attr({
-            'aria-hidden': 'true',
-            'tabindex': '-1'
+            'aria-hidden': 'true'
         }).find('a, input, button, select').attr({
             'tabindex': '-1'
         });
@@ -1360,9 +1359,9 @@
             }).end();
         }
 
-        for (var i=_.currentSlide, max=i+_.options.slidesToShow; i < max; i++) {
-            _.$slides.eq(i).attr('tabindex', 0);
-        }
+        // for (var i=_.currentSlide, max=i+_.options.slidesToShow; i < max; i++) {
+        //     _.$slides.eq(i).attr('tabindex', 0);
+        // }
 
         _.activateADA();
 
@@ -1707,7 +1706,7 @@
 
             if (_.options.accessibility === true) {
                 _.initADA();
-                
+
                 if (_.options.focusOnChange) {
                     var $currentSlide = $(_.$slides.get(_.currentSlide));
                     $currentSlide.attr('tabindex', 0).focus();
