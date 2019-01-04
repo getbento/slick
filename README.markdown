@@ -1,9 +1,11 @@
 slick
 -------
 
+This is a ADA-enhanced version of the slick carousel specifically for the three BentoBox main themes: Sensei, Osaka, and Fuji.
+
 [1]: <https://github.com/kenwheeler/slick>
 
-_the last carousel you'll ever need_
+
 
 #### Demo
 
