@@ -1273,7 +1273,7 @@
         if (!$(_.$slider).hasClass('slick-initialized')) {
 
             $(_.$slider).addClass('slick-initialized');
-            if($(_.$slider).find('li').length > 0){
+            if($(_.$slider).find('li').length > 0 || $(_.$slider).find('.card--gallery-image').length > 0){
                 $(_.$slider).attr('role', 'region');
                 $(_.$slider).attr('aria-label', 'carousel');
             }
@@ -1336,7 +1336,7 @@
                 }
             });
 
-            _.$dots.attr('role', 'tablist').find('li').each(function(i) {
+            _.$dots.find('li').each(function(i) {
                 var mappedSlideIndex = tabControlIndexes[i];
 
                 $(this).attr({
