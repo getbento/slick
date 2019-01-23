@@ -522,7 +522,7 @@
         _.$slider.addClass('slick-slider');
 
 
-        if(_.$slider.find('li').length > 0){
+        if(_.$slider.find('li').length > 0 || _.$slider.find('.card--gallery-image').length > 0){
             _.$slideTrack = (_.slideCount === 0) ?
                 $('<ul role="presentation" class="slick-track" />').appendTo(_.$slider) :
                 _.$slides.wrapAll('<ul role="presentation" class="slick-track"/>').parent();
@@ -1325,7 +1325,6 @@
                 var slideControlIndex = tabControlIndexes.indexOf(i);
 
                 $(this).attr({
-                    'role': 'tabpanel',
                     'id': 'slick-slide' + _.instanceUid + i,
                     'tabindex': -1
                 });
