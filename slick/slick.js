@@ -522,7 +522,7 @@
         _.$slider.addClass('slick-slider');
 
 
-        if(_.$slider.find('li').length > 0 || _.$slider.find('.card--gallery-image').length > 0){
+        if(_.$slider.find('li').length > 0 || _.$slider.find('.card').length > 0){
             _.$slideTrack = (_.slideCount === 0) ?
                 $('<ul role="presentation" class="slick-track" />').appendTo(_.$slider) :
                 _.$slides.wrapAll('<ul role="presentation" class="slick-track"/>').parent();
@@ -1273,7 +1273,7 @@
         if (!$(_.$slider).hasClass('slick-initialized')) {
 
             $(_.$slider).addClass('slick-initialized');
-            if($(_.$slider).find('li').length > 0 || $(_.$slider).find('.card--gallery-image').length > 0){
+            if($(_.$slider).find('li').length > 0 || $(_.$slider).find('.card').length > 0){
                 $(_.$slider).attr('role', 'region');
                 $(_.$slider).attr('aria-label', 'carousel');
             }
