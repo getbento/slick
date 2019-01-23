@@ -25,9 +25,6 @@ Just add a link to the css file in your `<head>`:
 
 ```html
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.css"/>
-=======
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.2/slick/slick.css"/>
->>>>>>> 1.7.2
 <!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.2/slick/slick-theme.css"/>
 ```
