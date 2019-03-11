@@ -488,7 +488,9 @@
 
             _.$slider.addClass('slick-dotted');
 
-            dot = $('<ul />').addClass(_.options.dotsClass);
+            dot = $('<ul />')
+                .attr('role', 'tablist')
+                .addClass(_.options.dotsClass);
 
             for (i = 0; i <= _.getDotCount(); i += 1) {
                 dot.append($('<li />').append(_.options.customPaging.call(this, _, i)));
